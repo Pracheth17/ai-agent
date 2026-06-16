@@ -106,18 +106,10 @@ def research_agent(topic):
 
 print("Research agent ready")
 
-research_agent("Artificial Intelligence in 2025")
 
-topic = input("Enter a topic for research: ")
-
-research_agent(topic)
-
-import os
-
-report_files = [f for f in os.listdir(".") if f.endswith("-report.txt")]
-
-print(f"You have generated {len(report_files)} research reports today:\n")
-
-for f in report_files:
-    size = os.path.getsize(f)
-    print(f"Report file: {f} ({size} bytes)")
+if __name__ == "__main__":
+    print("\n--- Running Local Tests ---")
+    test_results = search_web("Python programming language")
+    print(test_results)
+    
+    research_agent("Artificial Intelligence in 2025")
